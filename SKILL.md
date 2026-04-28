@@ -40,9 +40,29 @@ This skill provides expert-level guidance for building RESTful APIs using **Pyth
 - **Logic Separation**: Keep view functions thin; move complex business logic to a dedicated `services.py` layer.
 
 ## Reference Templates
-Refer to `snippets/crud_async.py` for the standard implementation of:
+
+**Refer to `snippets/schema.py` for the ModelSchema definitions and field naming.**
+- Standard Pydantic Schema (Non-Model based)
+- Model-based Schemas
+- Advanced Filtering/Search Schema
+- Auth/Token Schemas
+
+**Refer to `snippets/crud_async.py` for the standard implementation of:**
 - Async CRUD operations.
 - Multi-status code handling (201, 204, 404).
 - Integration with Django 5.0+ Async ORM.
+
+**Refer to `snippets/auth.py` Implementations for APIKey, JWT, and dependency-based security.**
+- API Key Authentication (e.g., for Internal Service-to-Service)
+- JWT / Bearer Token Authentication (Standard Web Auth)
+- Role-Based Access Control (RBAC) Pattern
+
+**Refer to `snippets/comparison.py` for comparisons between anti-patterns and optimized code.**
+- Response Handling
+- Async Usage
+- Error Handling
+- Authentication
+
+
 
 ---
