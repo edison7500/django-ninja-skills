@@ -45,6 +45,7 @@ When contributing or generating code, adhere to the patterns established in thes
 * 📂 [Schemas](snippets/schemas.py): Standards for ModelSchema definitions and field naming.
 * 📂 [Async CRUD](snippets/crud_async.py): Patterns for async def and modern Django ORM calls.
 * 📂 [Authentication](snippets/auth.py): Implementations for APIKey, JWT, and dependency-based security.
+* 📂 [JWT Auth (Ninja-JWT)](snippets/ninja_jwt.py): Advanced JWT implementation patterns.
 * 📂 [CSRF Protection](snippets/csrf.py): Patterns for CSRF exemption and validation.
 * 📂 [Quality Benchmarks](snippets/comparison.py): Comparisons between anti-patterns and optimized code.
 

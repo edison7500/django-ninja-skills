@@ -57,6 +57,11 @@ This skill provides expert-level guidance for building RESTful APIs using **Pyth
 - JWT / Bearer Token Authentication (Standard Web Auth)
 - Role-Based Access Control (RBAC) Pattern
 
+**Refer to `snippets/ninja_jwt.py` for integration with `django-ninja-jwt`.**
+- Detailed `NINJA_JWT` configuration (Rotation, Blacklisting).
+- Synchronous and Asynchronous JWT authentication patterns.
+- Custom JWT-based API Key header implementations.
+
 **Refer to `snippets/csrf.py` for CSRF protection patterns in Django Ninja.**
 - CSRF exemption and validation patterns.
 - Integration with frontend CSRF tokens.
