@@ -1,5 +1,7 @@
 # 🥷 Django Ninja Skills
 
+[中文版 README](./README.zh-CN.md)
+
 > Expert-level patterns for building high-performance, type-safe, and async-first APIs with Django.
 
 [![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
