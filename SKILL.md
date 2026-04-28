@@ -57,6 +57,10 @@ This skill provides expert-level guidance for building RESTful APIs using **Pyth
 - JWT / Bearer Token Authentication (Standard Web Auth)
 - Role-Based Access Control (RBAC) Pattern
 
+**Refer to `snippets/csrf.py` for CSRF protection patterns in Django Ninja.**
+- CSRF exemption and validation patterns.
+- Integration with frontend CSRF tokens.
+
 **Refer to `snippets/comparison.py` for comparisons between anti-patterns and optimized code.**
 - Response Handling
 - Async Usage

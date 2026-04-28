@@ -43,6 +43,7 @@
 * 📂 [Schemas](snippets/schemas.py)：ModelSchema 定義和字段命名的標準。
 * 📂 [Async CRUD](snippets/crud_async.py)：async def 和現代 Django ORM 調用的模式。
 * 📂 [Authentication](snippets/auth.py)：APIKey、JWT 和基於依賴的安全性實現。
+* 📂 [CSRF 保護](snippets/csrf.py)：CSRF 免除和驗證模式。
 * 📂 [Quality Benchmarks](snippets/comparison.py)：反模式與優化代碼之間的對比。
 
 ---
