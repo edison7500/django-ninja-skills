@@ -5,6 +5,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Django Version](https://img.shields.io/badge/django-4.2+-092e20.svg)](https://www.djangoproject.com/)
 [![Framework](https://img.shields.io/badge/framework-Django--Ninja-ff69b4.svg)](https://django-ninja.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)
 
 本项目旨在提供一份使用 Python 3.10+ 类型提示和 Pydantic 开发 RESTful API 的全面指南。它专注于掌握 [Django Ninja](https://django-ninja.dev/) 的三大支柱：异步并发、自动化文档和严格的类型安全。
 

@@ -1,12 +1,13 @@
 # 🥷 Django Ninja Skills
 
-[中文版 README](./README.zh-CN.md)
+[中文版 README](./README.zh-CN.md) | [繁體中文版 README](./README.zh-TW.md) | [日本語版 README](./README.ja.md)
 
 > Expert-level patterns for building high-performance, type-safe, and async-first APIs with Django.
 
 [![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Django Version](https://img.shields.io/badge/django-4.2+-092e20.svg)](https://www.djangoproject.com/)
 [![Framework](https://img.shields.io/badge/framework-Django--Ninja-ff69b4.svg)](https://django-ninja.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)
 
 This project serves as a comprehensive guide for developing RESTful APIs using Python 3.10+ type hints and Pydantic. It focuses on mastering the three pillars of [Django Ninja](https://django-ninja.dev/): Asynchronous concurrency, Automated documentation, and Strict type safety.
 
