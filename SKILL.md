@@ -72,6 +72,10 @@ This skill provides expert-level guidance for building RESTful APIs using **Pyth
 - Error Handling
 - Authentication
 
-
+**Refer to `snippets/pagination.py` for apply pagination to a function - just apply paginate decorator:**
+- Default (LimitOffset): @paginate
+- Page Number: @paginate(PageNumberPagination)
+- Cursor: @paginate(CursorPagination)
+- Custom: Create a class inheriting from PaginationBase and use @paginate(CustomPagination)
 
 ---

@@ -1,9 +1,9 @@
 from typing import List
 from django.shortcuts import get_object_or_404
-from ninja import Router, Schema
+from ninja import Router, Query
 from ninja.pagination import paginate
 from .models import Product
-from .schemas import ProductIn, ProductOut, Message
+from .schemas import ProductIn, ProductOut, ProductFilter, Message
 
 # 1. Initialize Router with Tags for Clean OpenAPI Docs
 router = Router(tags=["Products"])
@@ -12,12 +12,23 @@ router = Router(tags=["Products"])
 # --- READ (List) ---
 @router.get("/", response=List[ProductOut])
 @paginate  # Ninja built-in pagination
-async def list_products(request):
+async def list_products(request, filters: Query[ProductFilter]):
     """
     Retrieve a paginated list of products using Async QuerySets.
     """
     # Note: .all() is lazy, pagination handles the async evaluation if configured
-    return Product.objects.all()
+    qs = Product.objects.all()
+
+    if filters.category_id:
+        qs = qs.filter(category_id=filters.category_id)
+
+    order_by = (
+        filters.order_by.value
+        if hasattr(filters.order_by, "value")
+        else filters.order_by
+    )
+
+    return qs.order_by(order_by)
 
 
 # --- READ (Detail) ---
