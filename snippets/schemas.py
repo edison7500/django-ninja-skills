@@ -30,6 +30,11 @@ class ProductIn(ModelSchema):
     """
 
     category_id: int = Field(..., description="The ID of the related category")
+    status: Product.Status = Field(
+        ...,
+        description="product status",
+        examples=[Product.Status.ACTIVE],
+    )
 
     class Config:
         model = Product
@@ -43,7 +48,7 @@ class ProductOut(ModelSchema):
     """
 
     # Nested relationship
-    category: Optional[CategoryOut] = None
+    category: Optional[CategoryOut] = Field(None, description="product category")
 
     # Custom field not directly in model_fields (calculated or alias)
     is_in_stock: bool
@@ -54,6 +59,7 @@ class ProductOut(ModelSchema):
             "id",
             "name",
             "description",
+            "status",
             "price",
             "inventory_count",
             "created_at",
@@ -71,6 +77,11 @@ class ProductFilter(Schema):
 
     query: Optional[str] = None
     category_id: Optional[int] = None
+    status: Product.Status = Field(
+        ...,
+        description="product status",
+        examples=[Product.Status.ACTIVE],
+    )
     min_price: Optional[float] = Field(None, ge=0)
     max_price: Optional[float] = None
     order_by: str = "created_at"
