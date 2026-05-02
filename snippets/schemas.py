@@ -1,8 +1,9 @@
-from datetime import datetime
-from typing import List, Optional
-from uuid import UUID
+# from datetime import datetime
+# from typing import List, Optional
+# from uuid import UUID
 from ninja import Schema, ModelSchema
-from pydantic import Field, validator
+
+# from pydantic import Field, validator
 from .models import Product, Category
 
 
@@ -11,7 +12,7 @@ class Message(Schema):
     """Simple message schema for API responses like errors."""
 
     message: str
-    code: Optional[str] = None
+    code: str | None = None
 
 
 # 2. Model-based Schemas
@@ -48,7 +49,7 @@ class ProductOut(ModelSchema):
     """
 
     # Nested relationship
-    category: Optional[CategoryOut] = Field(None, description="product category")
+    category: CategoryOut | None = Field(None, description="product category")
 
     # Custom field not directly in model_fields (calculated or alias)
     is_in_stock: bool
@@ -75,15 +76,15 @@ class ProductOut(ModelSchema):
 class ProductFilter(Schema):
     """Schema for query parameters in list views."""
 
-    query: Optional[str] = None
-    category_id: Optional[int] = None
+    query: str | None = None
+    category_id: int | None = None
     status: Product.Status = Field(
         ...,
         description="product status",
         examples=[Product.Status.ACTIVE],
     )
-    min_price: Optional[float] = Field(None, ge=0)
-    max_price: Optional[float] = None
+    min_price: float | None = Field(None, ge=0)
+    max_price: float | None = None
     order_by: str = "created_at"
 
 

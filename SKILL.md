@@ -78,4 +78,11 @@ This skill provides expert-level guidance for building RESTful APIs using **Pyth
 - Cursor: @paginate(CursorPagination)
 - Custom: Create a class inheriting from PaginationBase and use @paginate(CustomPagination)
 
+**Refer to `snippets/throttles.py` for implementing API rate limiting and throttling:**
+- Global Throttling
+- Router-Level Throttling
+- Endpoint-Level Throttling
+- 💡 Rate Format Guide
+- 🛠️ How to Test Your Rate Limiting?
+
 ---
